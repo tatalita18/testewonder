@@ -552,18 +552,18 @@ footer {
 
 
 
-/* 2 PRODUTOS POR LINHA NO CELULAR */
+/* CENTRALIZAR PRODUTOS NO CELULAR */
 @media (max-width: 768px) {
   #produtos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;        /* espaço entre produtos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* diminui o espaço entre produtos */
     padding: 20px;
-    justify-items: center;
   }
 
   .product {
     width: 100%;
-    max-width: 160px; /* ajusta para caber 2 */
+    max-width: 320px; /* tamanho bonito no celular */
   }
 }
