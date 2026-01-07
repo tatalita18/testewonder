@@ -1,0 +1,569 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.navbar {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  justify-content: space-between;
+  background-color: rgb(167, 104, 206);
+  color: rgb(255, 255, 255);
+  border-style: ridge;
+  border-color: rgb(57, 4, 72);
+  border-width: thick;
+  gap: 15px
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.navbar img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(49, 6, 72, 0.8);
+}
+
+.nometop {
+  font-family: BlinkMacSystemFont;
+}
+
+.navbar h1 {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+  color: #b918bb;
+
+}
+
+/*Tudo sobre os produtos, imagens, butões, etc*/
+
+
+main {
+  padding: 2rem;
+}
+
+#produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 130px;
+  padding: 50px;
+}
+
+.product {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(58, 3, 90, 0.662);
+  text-align: center;
+  width: 200px;
+}
+
+.product h2 {
+  color: #6c14a6;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(184, 45, 239, 0.621);
+}
+
+
+button {
+  display: inline-block;
+  background: linear-gradient(90deg, #b22fd6, #54056a);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+nav ul li a:hover {
+  color: rgb(136, 27, 172)
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+
+
+/* Tudo sobre o carrinho*/
+
+
+#carrinho {
+  width: 300px;
+  /* Largura fixa */
+  margin: 50px auto;
+  /* Centraliza horizontalmente e dá espaçamento superior */
+  padding: 20px;
+  /* Espaçamento interno */
+  border: 2px solid #333;
+  /* Borda */
+  border-radius: 10px;
+  /* Cantos arredondados */
+  background-color: #f8f8f8;
+  /* Cor de fundo */
+  text-align: center;
+  /* Centraliza texto e elementos internos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra leve */
+  font-family: Arial, sans-serif;
+  /* Fonte */
+}
+
+/* Lista de itens do carrinho */
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+/* Botão estilizado */
+#carrinho button {
+  padding: 10px 20px;
+  background-color: #b61ec1;
+  /* Verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Botão muda de cor ao passar o mouse */
+#carrinho button:hover {
+  background-color: #8e39bc;
+}
+
+.cart-icon {
+  width: 24px;
+  /* ajuste o tamanho conforme necessário */
+  height: 24px;
+}
+
+/*Nome catalogo abaixo do rodapé*/
+.topcatalogo {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.topcatalogo h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #6c14a6;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Linha decorativa embaixo do nome*/
+.topcatalogo h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, #7b1fa2, #ba68c8, #e1bee7);
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+}
+
+
+
+/* ===============================
+   CARRINHO FLUTUANTE
+=============================== */
+
+#cart-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #7b1fa2, #ba68c8);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(123, 31, 162, 0.5);
+  transition: transform 0.3s;
+}
+
+#cart-float:hover {
+  transform: scale(1.1);
+}
+
+#cart-float img {
+  width: 32px;
+}
+
+#cart-float-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ffe082;
+  color: #4a148c;
+  font-weight: bold;
+  font-size: 13px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===============================
+   PAINEL DO CARRINHO (FLUTUANTE)
+=============================== */
+
+#carrinho {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 320px;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: none;
+  z-index: 9998;
+  background: #fdf7ff;
+  border: 2px solid #ba68c8;
+  box-shadow: 0 12px 30px rgba(106, 27, 154, 0.4);
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  #carrinho {
+    right: 10px;
+    left: 10px;
+    width: auto;
+    bottom: 90px;
+  }
+
+  #cart-float {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+
+/* ===============================
+   TOTAL DO CARRINHO
+=============================== */
+
+.cart-total-box {
+  margin: 15px 0;
+  padding: 10px;
+  background: linear-gradient(90deg, #ede7f6, #f3e5f5);
+  border-radius: 8px;
+  font-size: 16px;
+  color: #4a148c;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/*formulario de entrega*/
+
+
+.frete-info {
+  background: linear-gradient(90deg, #7b1fa2, #ba68c8);
+  color: white;
+  padding: 15px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#frete-msg {
+  margin-top: 10px;
+  color: #ffe082;
+}
+
+.filtro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filtro button {
+  margin: 5px;
+}
+
+#form-entrega {
+  margin-top: 20px;
+}
+
+#form-entrega input {
+  width: 90%;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+
+/* ===============================
+   ESTOQUE
+=============================== */
+
+.status-estoque {
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.disponivel {
+  color: green;
+}
+
+.esgotado {
+  color: red;
+}
+
+.product.esgotado-produto {
+  opacity: 0.5;
+}
+
+.product.esgotado-produto button {
+  background: gray;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+.descricao-produto {
+  display: none;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.btn-detalhes {
+  background: none;
+  border: none;
+  color: #8e39bc;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
+/*Rodapé direitos autorais*/
+
+footer {
+  width: 100%;
+  text-align: center;
+  clear: both;
+  /* garante que não flutue ao lado de produtos */
+  padding: 20px 0;
+  background-color: #f8f8f8;
+  /* ou sua cor */
+}
+
+.site {
+  background-color: white;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid white;
+}
+
+.site h3 {
+  margin-top: 0;
+  color: black;
+  align-items: center;
+}
+
+.site p {
+  margin: 10px 0;
+  color: darkgray;
+  font-size: 14px;
+}
+
+.site a:hover {
+  text-decoration: underline;
+}
+
+.site hr {
+  margin: 2opx auto;
+  width: 60%;
+  border-top: 1px solid white;
+
+}
+
+.links a {
+  margin: o 5px;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    font-size: 13px;
+  }
+}
+
+/* ===============================
+   SELETOR DE TAMANHO
+=============================== */
+
+.tamanho-box {
+  margin: 12px 0;
+  padding: 10px;
+  background: #f3e5f5;
+  border-radius: 10px;
+  border: 1px solid #ba68c8;
+  text-align: left;
+  font-size: 14px;
+}
+
+.tamanho-titulo {
+  font-weight: bold;
+  color: #6c14a6;
+  margin-bottom: 6px;
+}
+
+.tamanho-box label {
+  display: block;
+  margin: 4px 0;
+  cursor: pointer;
+  color: #4a148c;
+}
+
+.tamanho-box input {
+  margin-right: 6px;
+}
+
+.tamanho-box .personalizado {
+  font-weight: bold;
+  color: #7b1fa2;
+}
+
+
+/*1 promoção logo vermelha*/
+
+
+.selo-promocao {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e63946;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 20px;
+  animation: pulse 1.5s infinite;
+  z-index: 10;
+}
+
+.product {
+  position: relative;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(230, 57, 70, 0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+.preco-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.preco-antigo {
+  color: #999;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.preco-promocao {
+  color: #e63946;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+
+/* 2 PRODUTOS POR LINHA NO CELULAR */
+@media (max-width: 768px) {
+  #produtos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;        /* espaço entre produtos */
+    padding: 20px;
+    justify-items: center;
+  }
+
+  .product {
+    width: 100%;
+    max-width: 160px; /* ajusta para caber 2 */
+  }
+}
