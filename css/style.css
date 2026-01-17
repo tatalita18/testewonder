@@ -431,3 +431,41 @@ nav a {
   }
 
 }
+
+/*BANNER FRETE GRATIS*/
+
+.banner-inicio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  /* corta o excesso de altura */
+}
+
+.banner-inicio img {
+  width: 100%;
+  max-width: 1800px;
+  /* largura boa */
+  max-height: 420px;
+  /* 🔥 CONTROLA A ALTURA */
+  object-fit: cover;
+  /* mantém proporção sem distorcer */
+  border-radius: 18px;
+  margin: 20px 0;
+}
+
+/* Desktop maior */
+@media (min-width: 1200px) {
+  .banner-inicio img {
+    max-height: 360px;
+    /* ainda mais fina em telas grandes */
+  }
+}
+
+/* Mobile – não mexe */
+@media (max-width: 768px) {
+  .banner-inicio img {
+    max-height: none;
+    border-radius: 14px;
+  }
+}
