@@ -12,7 +12,7 @@ body {
   align-items: center;
   padding: 20px 40px;
   justify-content: space-between;
-  background-color: rgb(167, 104, 206);
+  background: linear-gradient(90deg, #7312e9, #9d12c4);
   color: rgb(255, 255, 255);
   border-style: ridge;
   border-color: rgb(57, 4, 72);
@@ -429,4 +429,5 @@ nav a {
   .site-footer {
     font-size: 13px;
   }
+
 }
