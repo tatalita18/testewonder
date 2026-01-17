@@ -432,7 +432,7 @@ nav a {
 
 }
 
-/* BANNER FRETE GRATIS */
+/*BANNER FRETE GRATIS*/
 
 .banner-inicio {
   width: 100%;
@@ -462,11 +462,13 @@ nav a {
   }
 }
 
-/* Mobile – BEM mais alto */
+/* Mobile – não mexe */
 @media (max-width: 768px) {
   .banner-inicio img {
-    min-height: 420px; /* ⬆️ MAIS ALTO NO CELULAR */
     max-height: none;
     border-radius: 14px;
   }
 }
+  }
+}
+
