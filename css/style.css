@@ -472,3 +472,84 @@ nav a {
   }
 }
 
+/* BANNER FRETE GRATIS E SEGUNDO BANNER */
+
+.banner-inicio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-slider {
+  width: 100%;
+  max-width: 1800px;
+  margin: 20px 0;
+  overflow: hidden; /* ✅ fica aqui */
+}
+
+/* faixa que desliza */
+.banner-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+/* imagens */
+.banner-track img {
+  width: 100%;
+  flex-shrink: 0;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* CONTROLES */
+.banner-controls {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.banner-arrow {
+  background: transparent;
+  border: 1px solid #b48cff;
+  color: #7a3db8;
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.banner-arrow:hover {
+  background: #f3eaff;
+  transform: translateY(-2px);
+}
+
+.banner-arrow:active {
+  transform: scale(0.95);
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .banner-track img {
+    max-height: 440px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .banner-track img {
+    max-height: none;
+    border-radius: 14px;
+  }
+}
+
+.banner-link {
+  display: block;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+
